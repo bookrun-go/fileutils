@@ -12,3 +12,9 @@ func GetFileSimpleName(fullFileName string) string {
 	filenameOnly := strings.TrimSuffix(filenameWithSuffix, fileSuffix) //获取文件名
 	return filenameOnly
 }
+
+func GetFileSuffix(fullFileName string) string {
+	filenameWithSuffix := filepath.Base(fullFileName)
+	fileSuffix := path.Ext(filenameWithSuffix)
+	return fileSuffix
+}
