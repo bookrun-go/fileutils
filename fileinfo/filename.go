@@ -16,5 +16,5 @@ func GetFileSimpleName(fullFileName string) string {
 func GetFileSuffix(fullFileName string) string {
 	filenameWithSuffix := filepath.Base(fullFileName)
 	fileSuffix := path.Ext(filenameWithSuffix)
-	return fileSuffix
+	return fileSuffix[1:]
 }
